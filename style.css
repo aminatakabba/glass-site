@@ -1,0 +1,128 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #6290C8, #829CBC);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 70%;
+    background: linear-gradient(to right bottom, #7a90bb48, #ffffff93);
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(2rem);
+    padding: 20px;
+    display: flex;
+}
+.circle1, .circle2 {
+    background-color: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.3)
+    );
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0.2rem);
+}
+.circle1 {
+    top: 5%;
+    right: 5%;
+}
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.user , .signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user {
+    right: 0;
+}
+.signup {
+    left: 0;
+}
+.user > .logo {
+    height: 15rem;
+    width: 90%;
+}
+.heavy {
+    width: 13rem;
+    height: 50%;
+}
+h2, p {
+    font-family: 'Montserrat', sans-serif;
+}
+.signup > input {
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    height: 30px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: -20px;
+}
+.input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .user , .signup {
+        width: 50%;
+    }
+}
